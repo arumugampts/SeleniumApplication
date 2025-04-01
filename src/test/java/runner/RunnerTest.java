@@ -9,13 +9,11 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(
         features ="src/test/resource/computerdb.feature",
         glue= {"StepDefinitions"},
-        plugin = {"pretty",
-        "html:target/cucumber_reports.html"}
-//      dryRun=true,
-//  plugin = {"json:target/cucumber.json"},
-//          tags="@ui"
-//      "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"
+        plugin = {"pretty", 
+              "html:target/cucumber-reports.html",
+              "json:target/cucumber-reports.json",
+              "junit:target/cucumber-reports.xml"}
         )
-public class testrunner {
+public class RunnerTest {
     
 }
